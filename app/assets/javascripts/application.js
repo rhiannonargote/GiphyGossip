@@ -14,8 +14,8 @@
 //= require jquery_ujs
 //= require underscore.js
 //= require backbone.js
-//= require ./models
-//= require ./collections 
-//= require ./views
-//= require ./routers
+//= require_tree ./models
+//= require_tree ./collections
+//= require_tree ./views
+//= require_tree ./routers
 //= require_tree .
