@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-sprockets
+//= require modernizr.js
 //= require underscore.js
 //= require backbone.js
 //= require_tree ./models

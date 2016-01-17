@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :stories
   resources :users
 
-  root 'stories#home'
+  root 'stories#new'
+  get  'login'   => 'sessions#new'
  
 end
