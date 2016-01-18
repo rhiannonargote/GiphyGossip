@@ -32,18 +32,18 @@ class StoriesController < ApplicationController
     @storyNew = @story.content.scan( /#(\w+)/ ).flatten
     @gifs = []
 
-    @storyNew.each do |tag|  
-      giphy_search = Giphy.search(tag, {limit: 1}) # Make a request to the Giphy API passing in the tag and the options      
-      @gifs << giphy_search   # When that comes back, push the result into the @gifs array
-      
-      # Save the correct information as a new Image and associate it with the story
-
-      # puts tag 
-
-    end
-    
     respond_to do |format|
       if @story.save
+        @storyNew.each do |tag|  
+          giphy_search = Giphy.search(tag, {limit: 1}) # Make a request to the Giphy API passing in the tag and the options      
+          # @gifs << giphy_search   # When that comes back, push the result into the @gifs array
+          image = Image.create :url => giphy_search[0].original_image.url.to_s, :word => tag      
+          # Save the correct information as a new Image and associate it with the story
+          @story.images << image
+          # puts tag 
+
+        end
+
         format.html { redirect_to @story, notice: 'Story was successfully created.' }
         format.json { render :show, status: :created, location: @story }
       else

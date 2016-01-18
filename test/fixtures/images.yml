@@ -4,7 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  story_id   :integer
-#  urL        :string
+#  url        :string
 #  word       :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null

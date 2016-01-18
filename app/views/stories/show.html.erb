@@ -22,9 +22,9 @@
 
 <p>
   <strong>Giphy:</strong>
-  <% @gif.each do |g| %>
+  <% @story.images.each do |g| %>
   
-  <img src="<%= g.fixed_height_image.url %>">
+  <img src="<%= g.url %>">
 
   <%end%>
 
