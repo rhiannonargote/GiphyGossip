@@ -2,7 +2,7 @@
   <strong>Giphy:</strong>
   <% @gif.each do |g| %>
   
-  <img src="<%= g.original_image.url %>">
+  <img src="<%= g.fixed_height_image.url %>">
 
   <%end%>
 
