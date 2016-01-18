@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   resources :stories
   resources :users
 
-  root 'stories#new'
+  root 'stories#home'
   get  'login'   => 'sessions#new'
-  get  'test'   => 'giphy#show'
+  get  'giphyshow'   => 'giphy#show'
 
 end
