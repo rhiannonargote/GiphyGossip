@@ -1,28 +1,62 @@
 body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: neouthin;
+  min-height: 2000px;
+
 }
 
+.navbar-inverse {
+  background-color: black;
+  border-color: black;
+}
+
+.navbar-inverse .navbar-brand {
+  color: yellow;
+}
+
+.navbar-header > .navbar-brand {
+font-family: filter_cfthin;
+font-color: yellow;
+font-size: 40px;
+}
+
+
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: neouthin;
   font-size: 13px;
   line-height: 18px;
+  color: white;
 }
 
 pre {
-  background-color: #eee;
+  background-color: black;
+  color: black;
   padding: 10px;
   font-size: 11px;
 }
 
+#storyForm > textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: black;
+    background: white;
+  }
+
+#storyForm > button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: black;
+}
+
 a {
-  color: #000;
+  color: white;
 
   &:visited {
-    color: #666;
+    color: black;
   }
 
   &:hover {
@@ -38,7 +72,7 @@ div {
 }
 
 #notice {
-  color: green;
+  color: black;
 }
 
 .field_with_errors {

@@ -2,85 +2,157 @@
 <html>
 <head>
   <title>GiphyGossip</title>
+  <link rel="stylesheet" href="css/stylesheet.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <!-- start nav bar -->
-  <nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
-
       </button>
       <a class="navbar-brand" href="/">GiphyGossip</a>
     </div>
-
       <ul class="nav navbar-nav navbar-right">
-
-        <li><a href data-toggle="modal" data-target="#login-modal">Login|Signup</a></li>
-
-     
+        <li><a href data-toggle="modal" data-target="#login-modal">Login | Signup</a></li>
         </li>
       </ul>
-    </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
 <!-- end of nav bar -->
 
+  <!-- header -->
+  <div class="homePageHeader" class id="title">
+    
+    <h2>What's the goss?</h2>
+
+  </div>
+
+  <!-- Title and search input div -->
+
+<div class="divNewView">
+    
+      <div class="divNewViewTitle" >
+           <input class="input" type="text" placeholder="TITLE" ></input>
+      </div>
+
+      <div class="divNewViewInput">
+          <input class="input" type="text" placeholder="Ex. I #LOVE #CUTECATS"></input>
+      </div>
+
+      <div class="divNewViewButton">
+        <button class="button">CREATE GIPHY GOSS</button>
+      </div>
+
+</div>
+  
+  <!-- Result Output div view -->
+
+<div class="divViewShow">
+
+    <div class="divViewShowTitle" class id="title">
+      
+      <h1>RESULT</h1>
+
+    </div>
+
+      <div class="divViewShowResult">
+        
+        <h1>Append Giphy result boxes here</h1>
+        <div id="box">Box 1</div>
+        <div id="box">Box 2</div>
+        <div id="box">Box 3</div>
+        <div id="box">Box 4</div>
+
+      </div>
+
+    <div class="divViewShowOutputTitle">
+      <h1>RESULT OUTPUT TITLE</h1>
+    </div> 
+
+    <div class="divViewShowSaveButton">
+      <button class="button">SAVE YOUR GOSS</button>
+    </div>
+
+    <div class="divViewShowShareButton">
+      <button class="button">SHARE YOUR GOSS TO GOSSIP GALLERY</button>
+    </div>
+
+</div>
+
+  <!-- Giphy Gossip view -->
+
+  <div class="divGiphyGossip">
+    
+      <div class="divGiphyGossipTitle" class id="title">
+        <h1>GOSSIP GALLERY</h1>
+      </div>
+
+      <div class="resultTitle">Should display DivNewViewTitle</div>
+      <div class="resultGiphy">Should display divViewShowResult</div>
+
+  </div>
+
+<!-- Modal -->
 
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="modal-header login_modal_header">
+<div class="modal-dialog">
+    <div class="modal-content">
+
+        <div class="modal-header login_modal_header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h2 class="modal-title" id="myModalLabel">Login to Your Account</h2>
-          </div>
-          <div class="modal-body login-modal">
-            <p>Giphy Gossip is an awesome application designed by the best students in WDI-12</p>
-            <br/>
-            <div class="clearfix"></div>
-            <div id='social-icons-conatainer'>
-              <div class='modal-body-left'>
-                <div class="form-group">
-                      <input type="text" id="username" placeholder="Enter your name" value="" class="form-control login-field">
-                      <i class="fa fa-user login-field-icon"></i>
-                  </div>
+              <h2 class="modal-title" id="myModalLabel">Login to Your Account</h2>
+        </div>
 
-                  <div class="form-group">
-                      <input type="password" id="login-pass" placeholder="Password" value="" class="form-control login-field">
-                      <i class="fa fa-lock login-field-icon"></i>
-                  </div>
+        <div class="modal-body login-modal">
+          <p>Giphy Gossip is an awesome application designed by the best students in WDI-12</p>
+          <br/>
+          <div class="clearfix"></div>
 
-                  <a href="#" class="btn btn-success modal-login-btn">Login</a>
-                  <a href="#" class="login-link text-center">Lost your password?</a>
+          <div id='social-icons-conatainer'>
+
+            <div class='modal-body-left'>
+
+              <div class="form-group">
+                    <input type="text" id="username" placeholder="Enter your name" value="" class="form-control login-field">
+                    <i class="fa fa-user login-field-icon"></i>
               </div>
 
-              <div class='modal-body-right'>
-                <div class="modal-social-icons">
-                  <a href='#' class="btn btn-default facebook"> <i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </a>
-                  <a href='#' class="btn btn-default twitter"> <i class="fa fa-twitter modal-icons"></i> Sign In with Twitter </a>
-                </div> 
-              </div>  
-              <div id='center-line'> OR </div>
-            </div>                                                        
-            <div class="clearfix"></div>
+              <div class="form-group">
+                    <input type="password" id="login-pass" placeholder="Password" value="" class="form-control login-field">
+                    <i class="fa fa-lock login-field-icon"></i>
+              </div>
 
-            <div class="form-group modal-register-btn">
-              <button class="btn btn-default"> New User Please Register</button>
-            </div>
-          </div>
+                <a href="#" class="btn btn-success modal-login-btn">Login</a>
+
+            <div class='modal-body-right'>
+              <div class="modal-social-icons">
+                <a href='#' class="btn btn-default facebook"> <i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </a>
+                <a href='#' class="btn btn-default twitter"> <i class="fa fa-twitter modal-icons"></i> Sign In with Twitter </a>
+                <button class="btn btn-default"> New User Please Register</button>
+              </div> 
+            </div>  
+            <div id='center-line'> OR </div>                                                      
           <div class="clearfix"></div>
-          <div class="modal-footer login_modal_footer">
-          </div>
-      </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="modal-footer login_modal_footer">
+        </div>
     </div>
+  </div>
 </div>
+  </div>
+</div>
+</div>
+
 
 <%= yield %>
 
