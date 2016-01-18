@@ -5,6 +5,6 @@ Rails.application.routes.draw do
 
   root 'stories#home'
   get  'login'   => 'sessions#new'
-  get  'giphyshow'   => 'giphy#show'
+  get  'giphy'   => 'stories#show'
 
 end

@@ -20,5 +20,16 @@
   <%= @story.public %>
 </p>
 
+<p>
+  <strong>Giphy:</strong>
+  <% @gif.each do |g| %>
+  
+  <img src="<%= g.fixed_height_image.url %>">
+
+  <%end%>
+
+</p>
+
+
 <%= link_to 'Edit', edit_story_path(@story) %> |
 <%= link_to 'Back', stories_path %>

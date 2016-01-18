@@ -13,6 +13,7 @@ class StoriesController < ApplicationController
   # GET /stories/1
   # GET /stories/1.json
   def show
+  
   end
 
   # GET /stories/new
@@ -28,7 +29,19 @@ class StoriesController < ApplicationController
   # POST /stories.json
   def create
     @story = Story.new(story_params)
+    @storyNew = @story.content.scan( /#(\w+)/ ).flatten
+    @gifs = []
 
+    @storyNew.each do |tag|  
+      giphy_search = Giphy.search(tag, {limit: 1}) # Make a request to the Giphy API passing in the tag and the options      
+      @gifs << giphy_search   # When that comes back, push the result into the @gifs array
+      
+      # Save the correct information as a new Image and associate it with the story
+
+      # puts tag 
+
+    end
+    
     respond_to do |format|
       if @story.save
         format.html { redirect_to @story, notice: 'Story was successfully created.' }
