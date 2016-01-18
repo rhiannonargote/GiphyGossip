@@ -6,6 +6,8 @@ gem 'rails', '4.2.5'
 
 gem 'bootstrap-sass',       '3.2.0.0'
 
+gem 'giphy'
+
 gem 'modernizr-rails'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
@@ -39,6 +41,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'pry-rails'
 end
 
 group :development do
