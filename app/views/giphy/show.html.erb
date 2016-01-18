@@ -1,4 +1,9 @@
 <p>
   <strong>Giphy:</strong>
-  <%= @gif.images %>
+  <% @gif.each do |g| %>
+  
+  <img src="<%= g.original_image.url %>">
+
+  <%end%>
+
 </p>
