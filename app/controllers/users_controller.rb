@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :check_if_admin, :except => [:show]
 
   # GET /users
   # GET /users.json
@@ -10,6 +11,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+     # Find the particular user from params[:id]
+    @user = User.find params[:id]
   end
 
   # GET /users/new
@@ -69,6 +72,10 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :admin)
+      params.require(:user).permit(:name, :email, :admin, :password)
     end
+
+    def check_if_admin
+      redirect_to search_path unless @current_user.present? && @current_user.admin?
+end
 end
