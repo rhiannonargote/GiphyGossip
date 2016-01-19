@@ -22,17 +22,17 @@ font-color: yellow;
 font-size: 40px;
 }
 
-
+/*
 p, ol, ul, td {
   font-family: neouthin;
   font-size: 13px;
   line-height: 18px;
   color: white;
-}
+}*/
 
 pre {
   background-color: black;
-  color: black;
+  color: white;
   padding: 10px;
   font-size: 11px;
 }
@@ -60,17 +60,17 @@ textarea {
   color: black;
 }
 
-a {
+.a {
   color: white;
 
   &:visited {
-    color: black;
+    color: white;
   }
 
-  &:hover {
+ /* &:hover {
     color: #fff;
     background-color: #000;
-  }
+  }*/
 }
 
 div {
