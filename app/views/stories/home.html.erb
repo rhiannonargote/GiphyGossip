@@ -1,24 +1,89 @@
+<!-- header -->
+  <div class="homePageHeader" class id="title">
+    
+    <h2>Whats the goss?</h2>
+
+  </div>
+
 <div id="main"></div>
 
 <script type="html/template" id="appViewTemplate">
 
-  <h1>Welcome to Giphy Gossip</h1>
 
-  <div id="storyForm">
+<!-- Story and title input div -->    
+
+<div class="divNewView">
+    
+  <div id="storyForm" class="divNewViewInput">
     Form goes here.  
   </div>
-
-  <ul id="stories">
-
-<p>"What's the Goss?"</p>
-
-  </ul>
   
 </script>
 
 <script type="html/template" id="storyInputViewTemplate">
   
-<textarea placeholder="Enter story"></textarea>
-<button>Submit</button>
+  <div class="divNewViewTitle" >
+           <input class="input" type="text" placeholder="TITLE" ></input>
+      </div>
+
+<textarea placeholder="Ex. I #LOVE #DOGS" class="input"></textarea>
+
+<div class="divNewViewButton">
+<button class="button"> CREATE GIPHY GOSS</button>
+</div>
 
 </script>
+
+ <!-- Result Output div view -->
+
+<div class="divViewShow">
+
+    <div class="divViewShowTitle" class id="title">
+      
+      <h1>RESULT</h1>
+
+    </div>
+
+  <p id="stories">
+
+  </p>
+
+</div>
+
+    <div class="divViewShowOutputTitle">
+      <h1>RESULT OUTPUT TITLE</h1>
+    </div> 
+
+      <div class="divViewShowResult">
+        
+        <h1>Append Giphy result boxes here</h1>
+        <div id="box">Box 1</div>
+        <div id="box">Box 2</div>
+        <div id="box">Box 3</div>
+        <div id="box">Box 4</div>
+
+      </div>
+
+
+    <div class="divViewShowSaveButton">
+      <button class="button">SAVE YOUR GOSS</button>
+    </div>
+
+    <div class="divViewShowShareButton">
+      <button class="button">SHARE YOUR GOSS TO GOSSIP GALLERY</button>
+    </div>
+
+</div>
+
+  <!-- Giphy Gossip view -->
+
+  <div class="divGiphyGossip">
+    
+      <div class="divGiphyGossipTitle" class id="title">
+        <h1>GOSSIP GALLERY</h1>
+      </div>
+
+      <div class="resultTitle">Should display DivNewViewTitle</div>
+      <div class="resultGiphy">Should display divViewShowResult</div>
+
+  </div>

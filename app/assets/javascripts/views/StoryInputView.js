@@ -24,10 +24,15 @@ app.StoryInputView = Backbone.View.extend({
       return;
     }
 
+    var currentTitle = this.$el.find('input').val();
+    if ( currentTitle.length === 0 ) {
+      return;
+    }
+
     var story = new app.Story(); // Create a new "instance"
     
     // Find the textarea within the el, and saves its value
-    story.set({ content: currentStory});
+    story.set({ title: currentTitle, content: currentStory});
     // On the instance of the story, store the content
     story.save(); // Send this story up to the server
 

@@ -16,7 +16,7 @@
     <% @images.each do |image| %>
       <tr>
         <td><%= image.story_id %></td>
-        <td><%= image.urL %></td>
+        <td><%= image.url %></td>
         <td><%= image.word %></td>
         <td><%= link_to 'Show', image %></td>
         <td><%= link_to 'Edit', edit_image_path(image) %></td>
