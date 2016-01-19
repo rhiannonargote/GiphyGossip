@@ -8,6 +8,8 @@ class StoriesController < ApplicationController
   # GET /stories.json
   def index
     @stories = Story.all
+
+    render :json => @stories.to_json(:include => [:images])
   end
 
   # GET /stories/1

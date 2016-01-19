@@ -36,7 +36,7 @@ app.StoryInputView = Backbone.View.extend({
     // On the instance of the story, store the content
     story.save(); // Send this story up to the server
 
-    app.stories.add( story ); // Add this story to the main collection
+    //app.stories.add( story ); // Add this story to the main collection
 
     this.$el.find('textarea').val('').focus();
     // Find the text area and remove all the text, and then put our cursor in there
