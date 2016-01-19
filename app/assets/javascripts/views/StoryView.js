@@ -8,7 +8,7 @@ app.StoryView = Backbone.View.extend({
     var images = this.model.get ( "images" );
     var html = '';
 
-    html = '<h2 class="divViewShowOutputTitle">' + title + '</h2><p>' + content + '</p>';
+    html = '<h2 class="divViewShowOutputTitle">' + title + '<p>' + content + '</p></h2>';
 
     if (images) {
       images.forEach(function(image) {
@@ -16,7 +16,10 @@ app.StoryView = Backbone.View.extend({
       });
     }
 
+    
+
     this.$el.html ( html ); // Set the li's content to be whatever was passed in
+    this.$el.prependTo( "#myGoss" ); // Puts in on the HTML page at the start of #myGoss
     this.$el.prependTo( "#stories" ); // Puts in on the HTML page at the start of #stories
   }
 });
