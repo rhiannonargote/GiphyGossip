@@ -39,9 +39,10 @@
 }
 
 .divNewViewInput {
-  border-style: solid;
+  border-style: none;
   padding: 10px;
   margin: 20px;
+
 }
 
 .divNewViewButton {
@@ -132,6 +133,22 @@
     width: 100%;
     height: 100%;
     font-size: 30px;
+    text-align: center;
+}
+
+#storyForm > textarea.input {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: white;
+    background: none;
+    border-style: solid;
+    border-color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+
+
 }
 
 /*modal css*/
