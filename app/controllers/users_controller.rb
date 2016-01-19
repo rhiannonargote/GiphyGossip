@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :check_if_admin, :except => [:show]
+  # before_action :check_if_admin, :except => [:show]
 
   # GET /users
   # GET /users.json
@@ -77,5 +77,5 @@ class UsersController < ApplicationController
 
     def check_if_admin
       redirect_to search_path unless @current_user.present? && @current_user.admin?
-end
+    end
 end

@@ -19,6 +19,13 @@
     <%= f.label :email %><br>
     <%= f.text_area :email %>
   </div>
+
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_area :password_digest, :required => true %>
+  </div>
+
+
   <div class="field">
     <%= f.label :admin %><br>
     <%= f.check_box :admin %>
