@@ -7,9 +7,9 @@ $(document).ready(function (){
   app.stories.fetch();
 
 // Create and interval that does a fetch every so often
-setInterval(function () {
-  app.stories.fetch();
-}, 1000); 
+// // setInterval(function () {
+//   app.stories.fetch();
+// }, 1000); 
 
 // We create a new instance of the router  
   app.router = new app.AppRouter();

@@ -13,6 +13,9 @@ app.Stories = Backbone.Collection.extend({
       storyView.render();
       // Call render on it
         console.log( story )
+      var galleryView = new app.GalleryView({ model: story});
+      // Create a new StoryView and give it some info to represent
+      galleryView.render();  
     });
   }
 });
