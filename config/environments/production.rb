@@ -12,7 +12,7 @@ Rails.application.configure do
     port: '587',
     enable_starttls_auto: true,
     user_name: 'rhiannonland@gmail.com',
-    password: 'foobar',
+    password: ENV["gmail_password"],
     authentication: :plain,
     domain: 'giphygossip.herokuapp.com'
   }
