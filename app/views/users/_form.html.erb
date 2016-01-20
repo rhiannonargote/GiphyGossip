@@ -22,9 +22,13 @@
 
   <div class="field">
     <%= f.label :password %><br>
-    <%= f.text_area :password_digest, :required => true %>
+    <%= f.text_area :password, :required => true %>
   </div>
 
+  <div class="field">
+    <%= f.label :password_confirmation %><br>
+    <%= f.text_area :password_confirmation, :required => true %>
+  </div>
 
   <div class="field">
     <%= f.label :admin %><br>

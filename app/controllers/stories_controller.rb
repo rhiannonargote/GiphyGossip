@@ -45,9 +45,8 @@ class StoriesController < ApplicationController
           # puts tag
 
         end
-
         format.html { redirect_to @story, notice: 'Story was successfully created.' }
-        format.json { render :show, status: :created, location: @story }
+        format.json { render :json => @story.to_json(:include => [:images]) }
       else
         format.html { render :new }
         format.json { render json: @story.errors, status: :unprocessable_entity }
