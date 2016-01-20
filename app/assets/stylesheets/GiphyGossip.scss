@@ -68,6 +68,12 @@
 
 }
 
+.bottomLine {
+  border-style: solid;
+  padding: 10px;
+  margin: 20px;
+}
+
 #box {
   border-style: solid;
   padding: 10px;
@@ -79,8 +85,17 @@
   border-style: solid;
   padding: 10px;
   margin: 20px;
+  color: white;
 
 }
+
+.divViewShowOutputTitle > p{
+  padding: 10px;
+  margin: 20px;
+  color: white;
+
+}
+
 
 .divViewShowSaveButton {
   border-style: solid;

@@ -8,6 +8,7 @@ app.StoryView = Backbone.View.extend({
     var images = this.model.get ( "images" );
     var html = '';
 
+
     html = '<h2 class="divViewShowOutputTitle">' + title + '<p>' + content + '</p></h2>';
 
     if (images) {
