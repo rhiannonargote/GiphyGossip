@@ -4,7 +4,14 @@ app.StoryView = Backbone.View.extend({
   tagName: "p", // this creates a new element
 
   events: {
-    'click img' : 'refreshImage'
+    'click img' : 'refreshImage',
+    'click button' : 'publish'
+  },
+
+  publish: function () {
+    var id = this.model.get('id');
+    $.post('/stories/' + id + '/publish');
+    this.$el.fadeOut();
   },
 
   refreshImage: function (event) {
@@ -46,6 +53,19 @@ app.StoryView = Backbone.View.extend({
       images.forEach(function(image) {
         html += '<img src="' + image.url + '">';
       });
+    }
+
+
+    // Adds a publish button to unpublished stories
+    // TODO: Only shown this button to the actual owner of this story
+    if (! this.model.get('public')) {
+      console.log(this.model.get('user_id'));
+      if (app.USER_ID == this.model.get('user_id')) {
+        html += '<button>Publish</button>'; // Owners get a button to publish stories.
+      } else {
+        console.log('skipping unpublished story', this.model.get('title'));
+        return; // Skip unpublished stories.
+      }
     }
 
     this.$el.html ( html ); // Set the p's content to be whatever was passed ins

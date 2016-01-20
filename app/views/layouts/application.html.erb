@@ -4,6 +4,11 @@
   <title>GiphyGossip</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <% if current_user.present? %>
+    <script>
+      app.USER_ID = <%= current_user.id %>;
+    </script>
+  <% end %>
 
   <%= csrf_meta_tags %>
 </head>
@@ -26,6 +31,9 @@
       <ul class="nav navbar-nav navbar-right">
 
         <a href data-toggle="modal" data-target="#login-modal">LOGIN</a>
+
+        <li><%= link_to "Sign out", destroy_user_session_path  %></li>
+
         
   </div><!-- /.container-fluid -->
 </nav>
@@ -49,7 +57,7 @@
  <div id='social-icons-conatainer'>
 
       <div class="modal-social-icons">
-          <a href='#' class="btn btn-default facebook"> <i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </a>
+          <a href='/users/sign_up' class="btn btn-default facebook"> <i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </a>
       </div> 
   </div>            
 </div>

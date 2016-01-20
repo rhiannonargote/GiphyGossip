@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   post '/login' => 'session#create'
   post '/login' => 'session#destroy'
   post '/refresh' => 'stories#refresh'
+  post 'stories/:id/publish' => 'stories#publish'
 
 end
