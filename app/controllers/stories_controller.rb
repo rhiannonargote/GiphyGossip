@@ -36,6 +36,7 @@ class StoriesController < ApplicationController
 
     respond_to do |format|
       if @story.save
+        current_user.stories << @story if current_user.present? # Associate the story with the current user.
         @storyNew.each do |tag|
 
           # HANDLE NO SEARCH RESULTS! render :json => { status: :unprocessable_entity, reason: "No available image" }
@@ -56,6 +57,14 @@ class StoriesController < ApplicationController
       end
     end
   end
+
+
+  def publish
+    story = Story.find params[:id]
+    story.update :public => true
+    render :json => { :status => 'ok'}
+  end
+
 
   # PATCH/PUT /stories/1
   # PATCH/PUT /stories/1.json
