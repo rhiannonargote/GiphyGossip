@@ -1,7 +1,7 @@
 Rails.application.configure do
   
   # General Settings
-  config.app_domain = 'http://localhost:3000/'
+  config.app_domain = 'giphygossip.herokuapp.com'
 
   # Email
   config.action_mailer.delivery_method = :smtp
@@ -11,10 +11,10 @@ Rails.application.configure do
     address: 'smtp.gmail.com', 
     port: '587',
     enable_starttls_auto: true,
-    user_name: 'rhiannon',
+    user_name: 'rhiannonland@gmail.com',
     password: 'foobar',
     authentication: :plain,
-    domain: 'http://localhost:3000/'
+    domain: 'giphygossip.herokuapp.com'
   }
 
   # Settings specified here will take precedence over those in config/application.rb.
