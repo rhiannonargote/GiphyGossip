@@ -7,9 +7,15 @@ body {
 
 }
 
+.navbar-nav {
+  padding: 15px 15px;
+  color: yellow;
+
+  }
+
 .navbar-inverse {
   background-color: black;
-  border-color: black;
+  font-size: 20px;
 }
 
 .navbar-inverse .navbar-brand {
@@ -50,7 +56,7 @@ textarea {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
-    color: pink;
+    color: white;
   }
 
 #storyForm > button {
@@ -62,15 +68,11 @@ textarea {
 
 .a {
   color: white;
+}
 
-  &:visited {
-    color: white;
-  }
+a {
+  color: yellow;
 
- /* &:hover {
-    color: #fff;
-    background-color: #000;
-  }*/
 }
 
 div {
@@ -80,6 +82,10 @@ div {
 }
 
 #notice {
+  color: black;
+}
+
+p {
   color: black;
 }
 
@@ -107,6 +113,7 @@ div {
     background-color: #c00;
     color: #fff;
   }
+
 
   ul li {
     font-size: 12px;
