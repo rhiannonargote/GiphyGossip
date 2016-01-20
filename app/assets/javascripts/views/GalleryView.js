@@ -2,6 +2,7 @@ var app = app || {}; // Global namespace
 
 app.GalleryView = Backbone.View.extend({
   tagName: "p", // this creates a new element
+
   render: function () {
     var content = this.model.get ( "content" ); // Get the content of the model that was passed in
     var title = this.model.get ( "title" );
@@ -16,7 +17,7 @@ app.GalleryView = Backbone.View.extend({
       });
     }
 
-    
+
 
     this.$el.html ( html ); // Set the p's content to be whatever was passed in
     this.$el.prependTo( "#stories" ); // Puts in on the HTML page at the start of #stories

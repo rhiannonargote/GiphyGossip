@@ -37,6 +37,9 @@ class StoriesController < ApplicationController
     respond_to do |format|
       if @story.save
         @storyNew.each do |tag|
+
+          # HANDLE NO SEARCH RESULTS! render :json => { status: :unprocessable_entity, reason: "No available image" }
+
           giphy_search = Giphy.search(tag, {limit: 1}) # Make a request to the Giphy API passing in the tag and the options
           # @gifs << giphy_search   # When that comes back, push the result into the @gifs array
           image = Image.create :url => giphy_search[0].original_image.url.to_s, :word => tag
@@ -69,6 +72,15 @@ class StoriesController < ApplicationController
   end
 
   def refresh
+    image_details = params["images"]["0"]
+    image = Image.find image_details["id"]
+
+    res = Giphy.random(image_details["word"])
+    # binding.pry
+    image.url = res.image_original_url.to_s
+    image.save
+
+    render :json => image
   end
 
   # DELETE /stories/1
