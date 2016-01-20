@@ -30,10 +30,14 @@
 
       <ul class="nav navbar-nav navbar-right">
 
-        <a href data-toggle="modal" data-target="#login-modal">LOGIN</a>
+        <a href data-toggle="modal" data-target="#login-modal">
 
-        <li><%= link_to "Sign out", destroy_user_session_path  %></li>
+          <ul class="hmenu">
+            <%= render 'devise/menu/login_items' %>
+          </ul>
 
+        </a>
+</ul>
         
   </div><!-- /.container-fluid -->
 </nav>
