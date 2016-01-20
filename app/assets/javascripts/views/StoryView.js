@@ -39,6 +39,7 @@ app.StoryView = Backbone.View.extend({
     // debugger;
     var html = '';
 
+
     html = '<h2 class="divViewShowOutputTitle">' + title + '<p>' + content + '</p></h2>';
 
     if (images) {
