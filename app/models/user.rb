@@ -2,12 +2,22 @@
 #
 # Table name: users
 #
-#  id         :integer          not null, primary key
-#  name       :text
-#  email      :text
-#  admin      :boolean
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id                     :integer          not null, primary key
+#  name                   :string
+#  admin                  :boolean
+#  created_at             :datetime         not null
+#  updated_at             :datetime         not null
+#  password_digest        :text
+#  email                  :string           default(""), not null
+#  encrypted_password     :string           default(""), not null
+#  reset_password_token   :string
+#  reset_password_sent_at :datetime
+#  remember_created_at    :datetime
+#  sign_in_count          :integer          default(0), not null
+#  current_sign_in_at     :datetime
+#  last_sign_in_at        :datetime
+#  current_sign_in_ip     :inet
+#  last_sign_in_ip        :inet
 #
 
 class User < ActiveRecord::Base
@@ -20,7 +30,7 @@ class User < ActiveRecord::Base
 
   # Include default devise modules. Others available are:
   # :lockable, :timeoutable
-  devise :database_authenticatable, :registerable, :confirmable,
+  devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
