@@ -47,12 +47,8 @@ app.StoryView = Backbone.View.extend({
         html += '<img src="' + image.url + '">';
       });
     }
-
-<<<<<<< HEAD
+    
     this.$el.html ( html ); // Set the p's content to be whatever was passed in    
-=======
-    this.$el.html ( html ); // Set the p's content to be whatever was passed ins
->>>>>>> 40c1d021f1a1715beaf2f0975d07f48c35df5c8c
     $("#myGoss").html(this.$el); // Puts in on the HTML page at the start of #stories
   }
 
