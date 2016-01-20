@@ -8,6 +8,9 @@ app.Stories = Backbone.Collection.extend({
     // console.log( "This ran" );
     // This is where my event handler will be added
     this.on("add", function (story) {
+      if (story.get('public') !== true) {
+        return;
+      }
       var storyView = new app.StoryView({ model: story });
       // Create a new StoryView and give it some info to represent
       storyView.render();
