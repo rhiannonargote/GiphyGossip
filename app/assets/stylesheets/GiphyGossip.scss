@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'filter_cfthin';
-    src: url('filtercf-thin-webfont.eot');
-    src: url('filtercf-thin-webfont.eot?#iefix') format('embedded-opentype'),
-         url('filtercf-thin-webfont.woff2') format('woff2'),
-         url('filtercf-thin-webfont.woff') format('woff'),
-         url('filtercf-thin-webfont.ttf') format('truetype'),
-         url('filtercf-thin-webfont.svg#filter_cfthin') format('svg');
+    src: asset-url('filtercf-thin-webfont.eot');
+    src: asset-url('filtercf-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         asset-url('filtercf-thin-webfont.woff2') format('woff2'),
+         asset-url('filtercf-thin-webfont.woff') format('woff'),
+         asset-url('filtercf-thin-webfont.ttf') format('truetype'),
+         asset-url('filtercf-thin-webfont.svg#filter_cfthin') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -14,12 +14,12 @@
 
 @font-face {
     font-family: 'neouthin';
-    src: url('neou-thin-webfont.eot');
-    src: url('neou-thin-webfont.eot?#iefix') format('embedded-opentype'),
-         url('neou-thin-webfont.woff2') format('woff2'),
-         url('neou-thin-webfont.woff') format('woff'),
-         url('neou-thin-webfont.ttf') format('truetype'),
-         url('neou-thin-webfont.svg#neouthin') format('svg');
+    src: asset-url('neou-thin-webfont.eot');
+    src: asset-url('neou-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         asset-url('neou-thin-webfont.woff2') format('woff2'),
+         asset-url('neou-thin-webfont.woff') format('woff'),
+         asset-url('neou-thin-webfont.ttf') format('truetype'),
+         asset-url('neou-thin-webfont.svg#neouthin') format('svg');
     font-weight: normal;
     font-style: normal;
 
