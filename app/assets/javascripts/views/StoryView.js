@@ -1,5 +1,57 @@
 var app = app || {}; // Global namespace
 
+//                                  .   .,,,...
+//                               . .=7??I?IIII???++.
+//                             ..=O7II77I$$OO$7$7I7+?+.
+//                            .~N7$7IZO$7$$7$ZDDNNMMOII+
+//                           ,ZO7$7D8ZOZZ778DDO$?+?7DMO87.
+//                        . =IO7$8O8Z$878O$I+=~::,,,:~$DD7..
+//                         +?DZDM888D8OZ?+~::,,,,,,,,,,~O7?:..
+//                        ~$$ZNND88N88I=~::,,,,,,,,,,,,,+O+?~
+//                      .:7$8NDNDNN8I+~::,,,,,,,,,,,,::::$7++,.
+//                      .$OODMNDNDZI+:,,,,,,,,,,,,,.,,,,::$7?+.
+//                      =$ZZMNDDN7+~~:,,,,,,,,,,,,,,,,,,,:?Z$?~
+//                      ZZDMMDMN+~~~=~::,,,,,,,,,:=++=~,,:+$$7+.
+//                    ..ZODDDNN+=II7II+=~::,:::=I7I~~=?~,:~7787= .
+//                    .,Z8MMDNI+7I++?7$7I+~:~:~====~~::~::=$8NO?=
+//                     ~NMDNMM+?++???II77I=:,,~+???::=~:::~8NNN$+  .
+//                     +M8DNN$+??7?~~?IZZZI:,,=I$$O8O~=~:,:$DMMD$:
+//                    .+N8DNM+++?I778NOZD7=:,::=?=7Z~++~:::+NMMM8+,.
+//                    .:NND87===++???++===+~,:,,:~~:,,,,,,::7+IMN7
+//                      Z+7O+=~:::~~~~~~~==:,::,,,,,,,,..,::IIZNMZ
+//                      ,7?7+=~~:::~~:~~==~:,,::,,,,,,,,,,::?:7NZ,
+//                       ?+7==~~~~::~~:=?ODI+IN~::,,,,,,,,::I:=I
+//                       ,=I==~~~~~~~~~+7$$$+=++:::,,,,,,,,:+:..
+//                        ~=====~~~~~=~=+??+I=~~:,,::,,,,,,::: .
+//                        .+=======~=~=+=?+=?=~:::,,::,,,,,,,..
+//                        ..~====+===+++++7~+++,::::::::,:,,..
+//                         ..==+++=~+IZD$I??7?+?OOI=:,,::,,.
+//                         ..~=+++=====?II??7?+~:,:~:,,::,,.
+//                         ...==+++==~~~~+??==~:,,::~::::,. ..
+//                         ...,=++++=+=~::::,,:,,,,,:::::,..
+//                         .....=????+++==~::::,::::~~~:,...
+//                          .....?II777III?++++=~===+==:,...
+//                          .....+?7$$ZZZZ$$777III???=~::..
+//                         ......+??I77$$$$$77I??++=~~~::...
+//                         ......=??I77$$$$77I??+==~~~::,..
+//                         . ....=??III77$$$7II+==~~~:::,..
+//                           ....=+?I?III777I?+=~~::::::,...
+//                        .  . .,=????II7II?+====:::::::,,..
+//                         .....=++???IIIII?+===~~:::::::,,...
+//                      .....7:~=++?+??II??+++=~~:::::::,,,,:=
+//                    ...,8D$~~==+??????++====~~~:::::::,,,,,ZOO=
+//                 ...=DDMMND~~~==????++==+=====~~::::~:,,,,,DDDNOO  .
+//             .. .ONDNNNMMMM=~===++??+=========~::::::,,,,,8NNNDDDD8Z. ..
+//            ,88DNNNNNNMNMMMN~=~==++??========~~::::,,,,,~DNNN8NNNNDDN8Z+
+//         =O8NDNNNNNNNNNMNMMMN+~~~~=++=~~~~==~~::,,,,::~NNNNNDDDNNNNNNNDDDOI.
+//    . .ODNNNDNNNNNNNMNNMMMMMMNN:::~~~=~::~~~~::,,,::=NNDNNNNNNNNNMNNNNNNNDDDO= ..
+//     ZDNNNNNNNNNMNNNMMMMMMMNMMMNNN?::::::::::,:,:DNNNNNMMNNNNNNNNNNDNNNNNNNDDD8~
+//   Z8DDNNNNMNNNNNNNNMMNMMMMMMNMMMMMMNMMNNNNNNNNNNMNNNNDNNNNNNNNNMNNDNNNNNNNNDNNDO
+//  ZDNNNNNNMNMNNNNNNNMMNMMMNMMNMMDMMNNNNMNNNNMNNNNNNNDNNNNNNNNNNNNMMNNNNNNNMNNDDND
+// 8NNNNNNNMMMNNNNNNNMMMNNNNNNNMMNNNMMMNDDDNNNDNMMNNNNDNNNNNNNNNNNNMMDNNNNMNMMNNNNN
+// DNNMNNNNMNNNNNNNNNNNMNNMNMNNNMNNNNNNNNNDNNNDNNNDNNDNNNDNDNDNNNNNMMDNNNNNNMMDNNNN
+// NNNMDNDNNDDDDDNDDDDNNDDDDNDD8DDND8DDDD8DDDDD888DDDDDDDDDDDDDDDDDNNDDDNDNNNN8DDDD
+
 app.StoryView = Backbone.View.extend({
   tagName: "p", // this creates a new element
 
