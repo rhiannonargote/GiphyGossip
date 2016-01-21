@@ -28,44 +28,28 @@
 
     </div>
 
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" class="hmenu">
+      
+      <% if current_user.present? %>
+       
+      <li>
+        <%= link_to('My Goss', user_path(current_user.id)) %>        
+      </li> 
 
-        <a href data-toggle="modal" data-target="#login-modal">
+      <% end %>
 
-          <ul class="hmenu">
-            <%= render 'devise/menu/login_items' %>
-          </ul>
+      <%= render 'devise/menu/login_items' %>
+          <!--ul class="hmenu">
+          </ul-->
 
-        </a>
 </ul>
         
   </div><!-- /.container-fluid -->
 </nav>
 <!-- end of nav bar -->
 
-<!-- Modal -->
 
-<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-        <div class="modal-header login_modal_header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <h2 class="modal-title" id="myModalLabel">Login to Your Account</h2>
-        </div>
-
-<div class="modal-body login-modal">
-          <p>Giphy Gossip is an awesome application designed by the best students in WDI-12</p>
-          <br/>
-
- <div id='social-icons-conatainer'>
-
-      <div class="modal-social-icons">
-          <a href='/users/sign_up' class="btn btn-default facebook"> <i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </a>
-      </div> 
-  </div>            
-</div>
-          <div class="modal-footer login_modal_footer"></div>
+        
     </div>
   </div>
 </div>
