@@ -27,7 +27,7 @@ app.GalleryView = Backbone.View.extend({
     }
 
 
-    html = '<h2 class="divViewShowOutputTitle"><a href="/stories/' + id + '">' + title + '</a><p>' + content + '</p>';
+    html = '<h2 class="divViewShowOutputTitle"><a href="/stories/' + id + '">' + title + '</a><a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Check%20out%20this%20gossip%20https%3A//giphygossip.herokuapp.com/' + 'stories/' + id + '">Tweet</a><p>' + content + '</p>';
 
     if (images) {
       images.forEach(function(image) {
@@ -38,7 +38,28 @@ app.GalleryView = Backbone.View.extend({
     html += "</h2>";
     this.$el.html ( html ); // Set the p's content to be whatever was passed in
     this.$el.prependTo( "#stories" ); // Puts in on the HTML page at the start of #stories
+
+  window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+   
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+   
+    return t;
+  }(document, "script", "twitter-wjs"));
+
+
   }
 
 
+
 });
+

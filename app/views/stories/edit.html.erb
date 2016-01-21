@@ -1,6 +1,51 @@
-<h1>Editing Story</h1>
+<div id="main"></div>
 
-<%= render 'form' %>
+<script type="html/template" id="appViewTemplate">
 
-<%= link_to 'Show', @story %> |
-<%= link_to 'Back', stories_path %>
+</script>
+
+<div class="divViewShowTitle" class id="title">
+
+      <h1>YOUR GIPHY GOSS</h1>
+
+</div> 
+
+<p>    </p>
+
+
+<%= link_to 'Back to Gossip Gallery', root_url %> 
+
+<h2 class="divViewShowOutputTitle">
+
+<p>
+  <%= @story.title %>
+</p>
+
+<span class="tag">
+  <%= @story.content %>
+</span>
+
+</h2>
+
+<p>
+  <% @story.images.each do |g| %>
+  
+  <img src="<%= g.url %>">
+
+  <%end%>
+
+</p>
+
+
+<script type="html/template" id="StoryViewTemplate">
+
+    <div class="divViewShowShareButton">
+
+      <button class="button">SHARE YOUR GOSS TO GOSSIP GALLERY</button>
+
+    </div>
+</script>
+
+
+
+
