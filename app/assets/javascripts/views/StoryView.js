@@ -54,10 +54,6 @@ app.StoryView = Backbone.View.extend({
         html += '<img src="' + image.url + '">';
       });
     }
-<<<<<<< HEAD
-    
-    this.$el.html ( html ); // Set the p's content to be whatever was passed in    
-=======
 
 
     // Adds a publish button to unpublished stories
@@ -73,7 +69,6 @@ app.StoryView = Backbone.View.extend({
     }
 
     this.$el.html ( html ); // Set the p's content to be whatever was passed ins
->>>>>>> 5f814ceb710fafccbdfaca39b3eee79ff088638f
     $("#myGoss").html(this.$el); // Puts in on the HTML page at the start of #stories
   }
 
