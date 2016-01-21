@@ -21,38 +21,38 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      
+
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only"></span></button>
-      
-     
+
+
           <a class="navbar-brand" href="/">GiphyGossip</a>
 
     </div>
 
       <ul class="nav navbar-nav navbar-right" class="hmenu">
-      
+
       <% if current_user.present? %>
-       
+
       <li>
-        <%= link_to('My Goss', user_path(current_user.id)) %>        
-      </li> 
+        <%= link_to('My Goss', user_path(current_user.id)) %>
+      </li>
 
       <% end %>
 
       <%= render 'devise/menu/login_items' %>
-      
-      <li class="addthis_sharing_toolbox"></li>  
+
+      <li class="addthis_sharing_toolbox"></li>
 
     </ul>
 
-        
+
   </div><!-- /.container-fluid -->
 </nav>
 <!-- end of nav bar -->
 
 
-        
+
     </div>
   </div>
 </div>
