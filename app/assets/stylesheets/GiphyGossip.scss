@@ -25,6 +25,26 @@
 
 }
 
+::-webkit-input-placeholder { /* Safari, Chrome and Opera */
+  color: yellow;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: yellow;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  color: yellow;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+  color: yellow;
+}
+
+::-ms-input-placeholder { /* Edge */
+  color: yellow;
+}
+
 ul
 {
     list-style-type: none;
