@@ -10,6 +10,7 @@ app.GalleryView = Backbone.View.extend({
     var content = this.model.get ( "content" ); // Get the content of the model that was passed in
     var title = this.model.get ( "title" );
     var images = this.model.get ( "images" );
+    var id = this.model.get( "id" );
     var html = '';
 
     // Store all the words that start with a hashtag in an array
@@ -26,7 +27,7 @@ app.GalleryView = Backbone.View.extend({
     }
 
 
-    html = '<h2 class="divViewShowOutputTitle">' + title + '<p>' + content + '</p></h2>';
+    html = '<h2 class="divViewShowOutputTitle"><a href="/stories/' + id + '">' + title + '</a><p>' + content + '</p></h2>';
 
     if (images) {
       images.forEach(function(image) {
