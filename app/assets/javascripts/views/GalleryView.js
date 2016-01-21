@@ -12,6 +12,20 @@ app.GalleryView = Backbone.View.extend({
     var images = this.model.get ( "images" );
     var html = '';
 
+    // Store all the words that start with a hashtag in an array
+    var contentHashTags = content.match( /(#\w+)/g ); // /g means global (don't just select the first match). () tell the Regular Expression which things to store. \w is any word character. + means one or more
+
+    for (var i = 0; i < contentHashTags.length; i++) {
+      var word = contentHashTags[i]; // Store the current word as word (from the hash tags array)
+      var wordWithSpan = "<span class='tag'>" + word + "</span>"; // Change the value of that word by adding the html tag span around it
+      
+      var toMatch = word; // Match the uneffected word (the one that doesn't have the span around it)
+      var re = new RegExp(toMatch, "g"); // Create a regular expression that does the global search
+
+      content = content.replace(re, wordWithSpan); // Replace that word with the word surrounded by the span tag and save the altered value as content
+    }
+
+
     html = '<h2 class="divViewShowOutputTitle">' + title + '<p>' + content + '</p></h2>';
 
     if (images) {
@@ -19,8 +33,6 @@ app.GalleryView = Backbone.View.extend({
         html += '<img src="' + image.url + '">';
       });
     }
-
-
 
     this.$el.html ( html ); // Set the p's content to be whatever was passed in
     this.$el.prependTo( "#stories" ); // Puts in on the HTML page at the start of #stories

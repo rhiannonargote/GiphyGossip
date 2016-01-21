@@ -30,6 +30,10 @@ ul
     list-style-type: none;
 }
 
+span.tag {
+  color: hotpink;
+}
+
 .homePageHeader > h2 {
  font-family: filter_cfthin;
   color: hotpink;
@@ -74,7 +78,6 @@ ul
 }
 
 .bottomLine {
-  border-style: solid;
   padding: 10px;
   margin: 20px;
 }

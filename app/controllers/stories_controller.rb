@@ -81,11 +81,9 @@ class StoriesController < ApplicationController
   end
 
   def refresh
-    image_details = params["images"]["0"]
-    image = Image.find image_details["id"]
-
-    res = Giphy.random(image_details["word"])
-    # binding.pry
+    image = Image.find_by :url => params[:image_url]
+    res = Giphy.random(image["word"])
+    
     image.url = res.image_original_url.to_s
     image.save
 
