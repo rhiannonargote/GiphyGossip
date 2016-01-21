@@ -67,7 +67,6 @@ app.StoryView = Backbone.View.extend({
     });
     this.$el.fadeOut();
     $(".divViewShow, p#myGoss, div.bottomLine").fadeOut();
-    // $(".divViewShowTitle").fadeOut();
   },
 
   refreshImage: function (event) {
