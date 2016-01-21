@@ -60,6 +60,12 @@ span.tag {
   color: hotpink;
 }
 
+.giphyPowered {
+  float: right;
+  margin-right: 20px;
+  margin-top: 50px;
+}
+
 .refresher {
   display: inline-block;
   position: relative;
@@ -225,10 +231,6 @@ span.tag {
   height: 100%;
   font-size: 30px;
 
-}
-
-img {
-  height: 200px;
 }
 
 img {
