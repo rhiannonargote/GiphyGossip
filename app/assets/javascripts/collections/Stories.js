@@ -23,10 +23,3 @@ app.Stories = Backbone.Collection.extend({
   }
 });
 
-$(document).ready(function () {
-  $('p#myGoss img').on('click', function () {
-    $(this).remove();
-      console.log('This was clicked')
-  });
-});
-

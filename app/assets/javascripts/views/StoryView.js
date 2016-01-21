@@ -5,7 +5,7 @@ app.StoryView = Backbone.View.extend({
 
   events: {
     'click img' : 'refreshImage',
-    'click button' : 'publish'
+    'click button' : 'publish',
   },
 
   publish: function () {
@@ -58,7 +58,7 @@ app.StoryView = Backbone.View.extend({
     for (var i = 0; i < contentHashTags.length; i++) {
       var word = contentHashTags[i]; // Store the current word as word (from the hash tags array)
       var wordWithSpan = "<span class='tag'>" + word + "</span>"; // Change the value of that word by adding the html tag span around it
-      
+
       var toMatch = word; // Match the uneffected word (the one that doesn't have the span around it)
       var re = new RegExp(toMatch, "g"); // Create a regular expression that does the global search
 
@@ -70,7 +70,7 @@ app.StoryView = Backbone.View.extend({
 
     if (images) {
       images.forEach(function(image) {
-        html += '<img src="' + image.url + '">';
+        html += '<div class="refresher"><img src="' + image.url + '"></div>';
       });
     }
 
@@ -89,10 +89,16 @@ app.StoryView = Backbone.View.extend({
       return; // Skip published stories.
     }
 
-    html += "</h2>";
-    this.$el.html ( html ); // Set the p's content to be whatever was passed in
+    this.$el.html( html ); // Set the p's content to be whatever was passed ins
     $("#myGoss").html(this.$el); // Puts in on the HTML page at the start of #stories
-    this.$el.prependTo( "#myStories" ); // Puts in on the HTML page at the start of #stories
+    $("#myGoss img").hover(function(){
+      var $that = $(this)
+      $that.parent().addClass('hoverText').append('<h2 class="refreshHTML">refresh</ah2>')
+    }, function(){
+      var $that = $(this)
+      $that.parent().removeClass('hoverText')
+      $that.parent().children('h2').fadeOut();
+    })
   }
 
 
