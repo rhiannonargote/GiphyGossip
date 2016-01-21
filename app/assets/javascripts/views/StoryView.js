@@ -78,7 +78,7 @@ app.StoryView = Backbone.View.extend({
     if (! this.model.get('public')) {
       console.log(this.model.get('user_id'));
       if (app.USER_ID == this.model.get('user_id')) {
-        html += '<button>Publish</button>'; // Owners get a button to publish stories.
+        html += $('#StoryViewTemplate').html(); // Owners get a button to publish stories.
       } else {
         console.log('skipping unpublished story', this.model.get('title'));
         return; // Skip unpublished stories.
