@@ -14,6 +14,7 @@ app.StoryView = Backbone.View.extend({
       app.stories.fetch();
     });
     this.$el.fadeOut();
+    // $(".divViewShowTitle").fadeOut();
   },
 
   refreshImage: function (event) {
