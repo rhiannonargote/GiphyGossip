@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get  'login'   => 'session#new'
   match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
   post '/login' => 'session#create'
-  post '/login' => 'session#destroy'
+  get '/logout' => 'session#destroy'
   post '/refresh' => 'stories#refresh'
   post 'stories/:id/publish' => 'stories#publish'
 
