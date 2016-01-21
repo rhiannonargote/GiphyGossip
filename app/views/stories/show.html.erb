@@ -1,27 +1,33 @@
+
+
+
+<!-- 
+</div>
+
+  <p id="myGoss"> </p>
+ -->
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @story.content %>
-</p>
+<div class="divViewShowTitle" class id="title">
+
+      <h1>YOUR GIPHY GOSS</h1>
+
+</div>
+
+<div class="divViewShowOutputTitle">
 
 <p>
-  <strong>User:</strong>
-  <%= @story.user_id %>
-</p>
-
-<p>
-  <strong>Title:</strong>
   <%= @story.title %>
 </p>
 
-<p>
-  <strong>Public:</strong>
-  <%= @story.public %>
+<p class="tag">
+  <%= @story.content %>
 </p>
 
+</div>
+
 <p>
-  <strong>Giphy:</strong>
   <% @story.images.each do |g| %>
   
   <img src="<%= g.url %>">
@@ -31,5 +37,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_story_path(@story) %> |
-<%= link_to 'Back', stories_path %>
+<%= link_to 'Change your Giphy story', root_url %> 
+
