@@ -7,7 +7,7 @@ app.Stories = Backbone.Collection.extend({
   initialize: function () {
     // console.log( "This ran" );
     // This is where my event handler will be added
-    this.on("add", function (story) {
+    this.on("add change", function (story) {
       // if (story.get('public') !== true) {
       //   return;
       // }

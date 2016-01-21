@@ -4,6 +4,9 @@ app.GalleryView = Backbone.View.extend({
   tagName: "p", // this creates a new element
 
   render: function () {
+    if (!this.model.get('public')){
+      return
+    }
     var content = this.model.get ( "content" ); // Get the content of the model that was passed in
     var title = this.model.get ( "title" );
     var images = this.model.get ( "images" );

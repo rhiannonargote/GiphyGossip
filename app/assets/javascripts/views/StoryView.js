@@ -10,7 +10,9 @@ app.StoryView = Backbone.View.extend({
 
   publish: function () {
     var id = this.model.get('id');
-    $.post('/stories/' + id + '/publish');
+    $.post('/stories/' + id + '/publish').done(function () {
+      app.stories.fetch();
+    });
     this.$el.fadeOut();
   },
 
@@ -81,6 +83,8 @@ app.StoryView = Backbone.View.extend({
         console.log('skipping unpublished story', this.model.get('title'));
         return; // Skip unpublished stories.
       }
+    } else {
+      return; // Skip published stories.
     }
 
     this.$el.html ( html ); // Set the p's content to be whatever was passed ins
