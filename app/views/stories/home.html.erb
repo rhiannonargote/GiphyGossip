@@ -1,7 +1,7 @@
 <!-- header -->
   <div class="homePageHeader" class id="title">
     
-    <h2>Whats the goss?</h2>
+      <h2>Whats the goss?</h2>
 
   </div>
 
@@ -23,17 +23,30 @@
 <script type="html/template" id="storyInputViewTemplate">
   
   <div class="divNewViewTitle" >
-           <input class="input" type="text" placeholder="TITLE" ></input>
+        
+        <input class="input" type="text" placeholder="TITLE" ></input>
       
+        <textarea placeholder="Ex. I #LOVE #DOGS" class="input"></textarea>
+  </div>
 
-<textarea placeholder="Ex. I #LOVE #DOGS" class="input"></textarea>
-</div>
+  <div class="divNewViewButton">
 
-<div class="divNewViewButton">
-<button class="button"> CREATE GIPHY GOSS</button>
-</div>
+        <button class="button"> CREATE GIPHY GOSS</button>
+
+  </div>
 
 </script>
+
+<script type="html/template" id="StoryViewTemplate">
+
+    <div class="divViewShowShareButton">
+     
+      <button class="button">SHARE YOUR GOSS TO GOSSIP GALLERY</button> 
+      
+    
+    </div>
+</script>
+
 
  <!-- Result Output div view -->
 
@@ -47,15 +60,9 @@
 
 </div>    
 
-    <p id="myGoss">
-
-    </p>
+  <p id="myGoss"> </p>
 
     <div class="bottomLine"> CLICK GIPHY TO CHANGE YOUR PICTURE</div>
-
-    <div class="divViewShowShareButton">
-      <button class="button">SHARE YOUR GOSS TO GOSSIP GALLERY</button>
-    </div>
 
 
 
@@ -69,6 +76,4 @@
 
 </div>    
 
-    <p id="stories">
-
-  </p>
+    <p id="stories"></p>
