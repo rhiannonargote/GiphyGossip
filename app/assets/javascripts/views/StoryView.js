@@ -87,8 +87,9 @@ app.StoryView = Backbone.View.extend({
       return; // Skip published stories.
     }
 
-    this.$el.html ( html ); // Set the p's content to be whatever was passed ins
+    this.$el.html ( html ); // Set the p's content to be whatever was passed in
     $("#myGoss").html(this.$el); // Puts in on the HTML page at the start of #stories
+    this.$el.prependTo( "#myStories" ); // Puts in on the HTML page at the start of #stories
   }
 
 
