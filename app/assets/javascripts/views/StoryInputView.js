@@ -35,6 +35,7 @@ app.StoryInputView = Backbone.View.extend({
     story.set({ title: currentTitle, content: currentStory});
     // On the instance of the story, store the content
     var view = this;
+    $('.divViewShow').show();
     story.save().done(function () {
 
       app.stories.add( story ); // Add this story to the main collection
