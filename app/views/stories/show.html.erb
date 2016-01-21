@@ -1,12 +1,4 @@
 
-
-
-<!-- 
-</div>
-
-  <p id="myGoss"> </p>
- -->
-
 <p id="notice"><%= notice %></p>
 
 <div class="divViewShowTitle" class id="title">
@@ -15,17 +7,17 @@
 
 </div>
 
-<div class="divViewShowOutputTitle">
+<h2 class="divViewShowOutputTitle">
 
 <p>
   <%= @story.title %>
 </p>
 
-<p class="tag">
+<span class="tag">
   <%= @story.content %>
-</p>
+</span>
 
-</div>
+</h2>
 
 <p>
   <% @story.images.each do |g| %>
@@ -37,5 +29,5 @@
 </p>
 
 
-<%= link_to 'Change your Giphy story', root_url %> 
+<%= link_to 'Change your Giphy Gossip', root_url %> 
 
