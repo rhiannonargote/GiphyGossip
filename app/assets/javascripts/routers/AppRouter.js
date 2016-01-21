@@ -4,7 +4,8 @@ var app = app || {}; // Global namespace
 // We extend a core component
 app.AppRouter = Backbone.Router.extend({
   routes: {
-    '': 'index' // If there is nothing the client-side URL, call the index function (inside router)
+    '': 'index', // If there is nothing the client-side URL, call the index function (inside router)
+    '_=_': 'index'
   },
 
   index: function () {
