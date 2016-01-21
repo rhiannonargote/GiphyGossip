@@ -27,7 +27,7 @@ app.GalleryView = Backbone.View.extend({
     }
 
 
-    html = '<h2 class="divViewShowOutputTitle"><a href="/stories/' + id + '">' + title + '</a><p>' + content + '</p></h2>';
+    html = '<h2 class="divViewShowOutputTitle"><a href="/stories/' + id + '">' + title + '</a><p>' + content + '</p>';
 
     if (images) {
       images.forEach(function(image) {
@@ -35,6 +35,7 @@ app.GalleryView = Backbone.View.extend({
       });
     }
 
+    html += "</h2>";
     this.$el.html ( html ); // Set the p's content to be whatever was passed in
     this.$el.prependTo( "#stories" ); // Puts in on the HTML page at the start of #stories
   }

@@ -66,7 +66,7 @@ app.StoryView = Backbone.View.extend({
     }
 
 
-    html = '<h2 class="divViewShowOutputTitle">' + title + '<p>' + content + '</p></h2>';
+    html = '<h2 class="divViewShowOutputTitle">' + title + '<p>' + content + '</p>';
 
     if (images) {
       images.forEach(function(image) {
@@ -89,6 +89,7 @@ app.StoryView = Backbone.View.extend({
       return; // Skip published stories.
     }
 
+    html += "</h2>";
     this.$el.html ( html ); // Set the p's content to be whatever was passed in
     $("#myGoss").html(this.$el); // Puts in on the HTML page at the start of #stories
     this.$el.prependTo( "#myStories" ); // Puts in on the HTML page at the start of #stories
