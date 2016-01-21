@@ -77,7 +77,7 @@ app.StoryView = Backbone.View.extend({
 
     // Adds a publish button to unpublished stories
     // TODO: Only shown this button to the actual owner of this story
-    if (! this.model.get('public')) {
+    if (! this.model.get('public') || Backbone.history.location.pathname.match(/\/users\/\d/)) {
       console.log(this.model.get('user_id'));
       if (app.USER_ID == this.model.get('user_id')) {
         html += $('#StoryViewTemplate').html(); // Owners get a button to publish stories.

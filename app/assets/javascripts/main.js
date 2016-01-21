@@ -7,14 +7,14 @@ $(document).ready(function (){
   app.stories.fetch().done(function () {
 
   // Create and interval that does a fetch every so often
-  setInterval(function () {
-    app.stories.fetch();
-  }, 1000); 
+  // setInterval(function () {
+  //   app.stories.fetch();
+  // }, 1000); 
 
   // We create a new instance of the router  
     app.router = new app.AppRouter();
 
-  // This starts the router and makes it listen for changes  
+  // // This starts the router and makes it listen for changes  
     Backbone.history.start();
   });
 });
