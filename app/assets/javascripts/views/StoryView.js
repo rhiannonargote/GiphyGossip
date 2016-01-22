@@ -141,8 +141,8 @@ app.StoryView = Backbone.View.extend({
     }
 
     this.$el.html( html ); // Set the p's content to be whatever was passed ins
-    $("#myStories").html(this.$el); // Puts in on the HTML page at the start of #stories
-    $("#myStories img").hover(function(){
+    $("#myGoss").html(this.$el); // Puts in on the HTML page at the start of #stories
+    $("#myGoss img").hover(function(){
       var $that = $(this)
       $that.parent().addClass('hoverText').append('<h2 class="refreshHTML">click to refresh image</ah2>')
     }, function(){
