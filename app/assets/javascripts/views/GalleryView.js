@@ -37,7 +37,7 @@ app.GalleryView = Backbone.View.extend({
 
     html += "</h2>";
     this.$el.html ( html ); // Set the p's content to be whatever was passed in
-    this.$el.prependTo( "#stories" ); // Puts in on the HTML page at the start of #stories
+    this.$el.prependTo( "#stories, #myStories" ); // Puts in on the HTML page at the start of #stories
 
   window.twttr = (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0],

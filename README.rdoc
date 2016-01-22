@@ -1,27 +1,23 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Application name: Giphy Gossip
 
-Things you may want to cover:
+The idea:
 
-* Ruby version
+The use of Giphys is increasing in popularity. Using images to express yourself in social media is fun. We wanted to create an app that allowed you to turn a one sentence story in to a Giphy story.
 
-* System dependencies
+The solution:
 
-* Configuration
+Users can create a Giphy Gossip by entering a title and a story with #words they want to turn in to Giphys.
 
-* Database creation
+Once the story has been created, users can refresh the Giphy they are given, if they don't like it.
 
-* Database initialization
+Once a user is happy with their Giphy Gossip, they can save their Gossip to the Giphy Gallery.
 
-* How to run the test suite
+Code:
 
-* Services (job queues, cache servers, search engines, etc.)
+We created Giphy Gossip, using mainly JS, Rails and Backbone. 
 
-* Deployment instructions
-
-* ...
 
 
 Please feel free to use a different markup language if you do not plan to run
