@@ -16,8 +16,33 @@ Once a user is happy with their Giphy Gossip, they can save their Gossip to the 
 
 Code:
 
-We created Giphy Gossip, using mainly JS, Rails and Backbone. 
+We created Giphy Gossip, using mainly JS on the front end, Rails and Backbone framework. 
 
+We used the Giphy API (Search) to pull in a Giphy, based on a #word, pulled out via RegEx. This was made very simple through the use of the Ruby Giphy Gem.
+
+Oauth for Facebook has been activated and works!!! This was implemented via the Oauth and Devise Gems. 
+
+We used Bootstrap for the nav bar and log in buttons.
+
+We used AddThis code to allow sharing of our website, as well as a Tweet button in JS ot share individual Giphy Gossips from the Gossip Gallery.
+
+Sore points:
+
+Oauth was a struggle in the final stages to get working, but it was the first time we had used it, so a success given we got it working well. This was also out first use of Backbone, so there was some stumbling around.
+
+Getting the Giphy to refresh in the same order which the #words was created also took some time.
+
+Thanks to:
+
+Jack Jeffress and Joel Turnbull from General Assembly Sydney for help with many bug fixes and how to approach certain features.
+
+Next steps:
+We have a lot of HTML code in our JS, so it would be good to clean this up a bit.
+Developing User profiles and even allowing following, to make it more interactive for users.
+
+References:
+http://sourcey.com/rails-4-omniauth-using-devise-with-twitter-facebook-and-linkedin/#changes
+https://dev.twitter.com/web/tweet-button
 
 
 Please feel free to use a different markup language if you do not plan to run
