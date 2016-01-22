@@ -129,11 +129,11 @@ app.StoryView = Backbone.View.extend({
     // Adds a publish button to unpublished stories
     // TODO: Only shown this button to the actual owner of this story
     if (! this.model.get('public') || Backbone.history.location.pathname.match(/\/users\/\d/)) {
-      console.log(this.model.get('user_id'));
+      // console.log(this.model.get('user_id'));
       if (app.USER_ID == this.model.get('user_id')) {
         html += $('#StoryViewTemplate').html(); // Owners get a button to publish stories.
       } else {
-        console.log('skipping unpublished story', this.model.get('title'));
+        // console.log('skipping unpublished story', this.model.get('title'));
         return; // Skip unpublished stories.
       }
     } else {
@@ -141,8 +141,8 @@ app.StoryView = Backbone.View.extend({
     }
 
     this.$el.html( html ); // Set the p's content to be whatever was passed ins
-    $("#myGoss").html(this.$el); // Puts in on the HTML page at the start of #stories
-    $("#myGoss img").hover(function(){
+    $("#myStories").html(this.$el); // Puts in on the HTML page at the start of #stories
+    $("#myStories img").hover(function(){
       var $that = $(this)
       $that.parent().addClass('hoverText').append('<h2 class="refreshHTML">click to refresh image</ah2>')
     }, function(){
